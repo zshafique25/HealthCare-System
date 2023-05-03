@@ -1,0 +1,78 @@
+<%-include("../partials/header")%>
+
+<!--Start Patient More Info-->
+<script>
+    $(document).ready(function() {
+    var $allSelects = $('select.select');
+
+        $allSelects.change(function() {
+          var $this = $(this),
+            $otherSelects = $allSelects.not($this);
+
+          $('option[value="' + $this.val() + '"]:selected', $otherSelects).parent().val('');
+        });
+
+    });
+</script>
+<link rel="stylesheet" href="/newpatientrecord.css">
+<section class="patientinfo">
+    <div class="container">
+        <h1>New Patient</h1>
+        <div class="box">
+            <form class="form" action="/HCS/<%=currentUser._id%>/new" method="POST"
+                enctype="application/x-www-form-urlencoded" accept-charset="UTF-8" autocomplete="off">
+                <label>CNIC:</label><br>
+                <input type="text" id="cnic" name="search" placeholder="xxxxxxxxxxxxx" pattern="[0-9]{13}"
+                    maxlength="13" required><br>
+                <select class="Select" id="hospital" name="hospital" required>
+                    <option disabled selected>Select Hospital/Clinic</option>
+                    <option value="<%=hospital.name %>"><%=hospital.name %></option>
+                </select><br>
+                <label>Illness:</label><br>
+                <select class="select" id="illness1" name="illness1" required>
+                    <option selected value="None">None</option>
+                    <option value="Flu">Flu</option>
+                    <option value="Fever">Fever</option>
+                    <option value="Cough">Cough</option>
+                    <option value="Cold">Cold</option>
+                    <option value="Typhoid">Typhoid</option>
+                    <option value="Sore Throat">Sore Throat</option>
+                    <option value="Diabetes">Diabetes</option>
+                </select>
+                <select class="select" id="illness2" name="illness2">
+                    <option selected value="None">None</option>
+                    <option value="Flu">Flu</option>
+                    <option value="Fever">Fever</option>
+                    <option value="Cough">Cough</option>
+                    <option value="Cold">Cold</option>
+                    <option value="Typhoid">Typhoid</option>
+                    <option value="Sore Throat">Sore Throat</option>
+                    <option value="Diabetes">Diabetes</option>
+                </select>
+                <select class="select" id="illness3" name="illness3">
+                    <option selected value="None">None</option>
+                    <option value="Flu">Flu</option>
+                    <option value="Fever">Fever</option>
+                    <option value="Cough">Cough</option>
+                    <option value="Cold">Cold</option>
+                    <option value="Typhoid">Typhoid</option>
+                    <option value="Sore Throat">Sore Throat</option>
+                    <option value="Diabetes">Diabetes</option>
+                </select><br><br>
+                
+                <label>Medicine referred:</label><br>
+                <input type="text" id="medicineref" name="medicine" required><br>
+                <label>Medicine description:</label><br>
+                <input type="text" id="medicinedes" name="medicinedescription" required><br>
+                <label>Doctor comments(if any):</label><br>
+                <textarea id="doccomments" name="comments" placeholder="Your Message" ></textarea><br>
+                <input type="submit" id="save" class="button" value="Save">
+            </form>
+        </div>
+
+    </div>
+</section>
+<!--End Patient More Info-->
+
+
+<%-include("../partials/footer")%>

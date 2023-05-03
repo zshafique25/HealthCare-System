@@ -1,0 +1,53 @@
+<%-include("../partials/header")%>
+
+
+<!--Start More Info-->
+<script type="text/javascript" src="script.js"></script>
+<link rel="stylesheet" href="/moreinfo.css">
+<section class="moreinfo">
+    <div class="container">
+        <h1>More Info about Medical Record</h1>
+        <div class="box">
+            <!--Signup form-->
+            <form class="form" method="GET" enctype="application/x-www-form-urlencoded" accept-charset="UTF-8"
+                autocomplete="off">
+                <div class="textdisplay">
+                    <table>
+                        <tr>
+                            <th>Hospital Name:</th>
+                            <td><%= record.hospitalname %></td>
+                        </tr>
+                        <tr>
+                            <th>Doctor Name:</th>
+                            <td><%= record.doctorname %></td>
+                        </tr>
+                        <tr>
+                            <th>Time of arrival:</th>
+                            <td><%= record.timeofarrival.toDateString() %></td>
+                        </tr>
+                        <tr>
+                            <th>Illness:</th>
+                            <td><%=record.illness%></td>
+                        </tr>
+                        <tr>
+                            <th>Medicine referred:</th>
+                            <td><%= record.medication %></td>
+                        </tr>
+                        <tr>
+                            <th>Medicine description:</th>
+                            <td><%= record.medicationdescription %></td>
+                        </tr>
+                        <tr>
+                            <th>Doctor comments(if any):</th>
+                            <td><%= record.comments %></td>
+                        </tr>
+                    </table>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</section>
+<!--End More Info-->
+
+<%-include("../partials/footer")%>

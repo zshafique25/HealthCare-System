@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700,900&display=swap');
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+.hospitalinfo{
+    min-height: 100vh;
+    padding: 15px;
+}
+.hospitalinfo h1{
+    margin-top: 70px;
+}
+.hospitalinfo h1::after{
+    content: '';
+    background: #ff4d73;
+    display: block;
+    height: 3px;
+    width: 160px;
+    margin: 10px auto 50px;
+    position: absolute;    
+}
+.hospital table, th, td{
+    border-collapse: collapse;
+    margin-top: 40px;
+    height: 60px;
+}
+.hospital th{
+    width: 290px;
+    text-align: left;
+}
+.hospital td{
+    width: 780px;
+    text-align: left;
+}
+.doctors h3{
+    margin-top: 10px;
+}
+.doctors table, th, td{
+    border-collapse: collapse;
+    margin-top: 10px;
+    height: 20px;
+    width: 1100px;
+    font-size: 14px;
+    text-align: center;
+}
+.doctors table tr:nth-child(even){
+    background-color: #f2f2f2;
+}

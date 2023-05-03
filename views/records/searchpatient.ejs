@@ -1,0 +1,31 @@
+<%-include("../partials/header")%>
+
+<!--Start Patient Info-->
+<link rel="stylesheet" href="/search.css">
+<section class="search">
+    <div class="container">
+        <h1>Search Patient</h1><br><br><br>
+        <div >
+            <form class="form" action="/HCS/:id/search" method="POST" enctype="application/x-www-form-urlencoded"
+                accept-charset="UTF-8" autocomplete="off">
+                <p>Enter below Patient's CNIC</p><br>
+                <div class="inputcnic">
+                    <table>
+                        <tr>
+                            <td><input type="text" name="search" id="cnic" class="cnic" placeholder="xxxxxxxxxxxxx"
+                                    pattern="[0-9]{13}" maxlength="13" autocomplete="off" required></td>
+                        </tr>
+                        <tr>
+                            <td><input type="submit" class="button" id="submit" value="Search"></td>
+                        </tr>
+                    </table>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</section>
+<!--End Patiient Info-->
+
+
+<%-include("../partials/footer")%>

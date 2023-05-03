@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700,900&display=swap');
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+.searchresult{
+    min-height: 100vh;
+    padding: 15px;
+}
+.searchresult h1{
+    margin-top: 70px;
+}
+.searchresult h1::after{
+    content: '';
+    background: #ff4d73;
+    display: block;
+    height: 3px;
+    width: 160px;
+    margin: 10px auto 50px;
+    position: absolute;    
+}
+.searchresult .textdisplay table, th, td{
+    margin-top: 40px;
+    font-size: 16px;
+
+
+}
+.searchresult .textdisplay table td{
+    text-align: center;    
+
+}
+
+#show {
+    border: 1px solid #333333;
+    border-collapse: collapse;
+    margin-top: 40px;
+    height: 20px;
+    width: 800px;
+    font-size: 16px;
+    text-align: center;    
+    background-color: #f2f2f2;
+
+
+}

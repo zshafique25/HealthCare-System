@@ -1,0 +1,131 @@
+<%-include("../partials/header")%>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+    google.charts.load('current', { 'packages': ['corechart'] });
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+        var arr = <%- JSON.stringify(arr) %>;
+        var countarr = <%- JSON.stringify(countarr) %>;
+        var data = google.visualization.arrayToDataTable([
+            ['Disease', 'Percentage'],
+            [arr[0], countarr[0]],
+            [arr[1], countarr[1]],
+            [arr[2], countarr[2]],
+            [arr[3], countarr[3]],
+            [arr[4], countarr[4]],
+            [arr[5], countarr[5]],
+            [arr[6], countarr[6]]
+
+        ]);
+
+        var options = {
+            title: 'Medical Records',
+            width: 900,
+            height: 500,
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+    }
+</script>
+<!--Start Home-->
+
+<link rel="stylesheet" href="/homestyle.css">
+<section class="home">
+    <div class="container">
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="/images/62.jpg">
+            </div>
+        </div>
+        <div class="detail-box">
+            <p><q>We want to make sure that we incentivize the <span style="color: #ff4d73;">health care system</span>
+                    to be designed to provide you the best quality health care possible.</q></p>
+            <h3>Valerie Jarret</h3>
+        </div>
+        <div class="box">
+            <h1>Pie Chart of Medical Records</h1>
+            <!-- Display the pie chart -->
+            <div class="piechart" id="piechart"></div>
+        </div>
+        <div class="health-care">
+            <h1>Safety Measures</h1>
+            <table>
+                <tr>
+                    <td>
+                        <div class="image">
+                            <img src="/images/covid.png">
+                        </div>
+                        <p>Wash your hands before and after every work</p>
+                    </td>
+                    <td>
+                        <div class="image">
+                            <img src="/images/people.png">
+                        </div>
+                        <p>Wear mask when you feel flu and cough</p>
+                    </td>
+                    <td>
+                        <div class="image">
+                            <img src="/images/social-distancing.png">
+                        </div>
+                        <p>Maintain social distancing when you are disinfected</p>
+                    </td>
+                    <td>
+                        <div class="image">
+                            <img src="/images/pharmaceutical.png">
+                        </div>
+                        <p>Use medicines according to Doctor's prescription</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="image">
+                            <img src="/images/blood.png">
+                        </div>
+                        <p>Regularly check your diabetes level before using insulin</p>
+                    </td>
+                    <td>
+                        <div class="image">
+                            <img src="/images/exercise.png">
+                        </div>
+                        <p>Do useful exercise daily</p>
+                    </td>
+                    <td>
+                        <div class="image">
+                            <img src="/images/hypertension.png">
+                        </div>
+                        <p>Check your blood pressure before taking medicine</p>
+                    </td>
+                    <td>
+                        <div class="image">
+                            <img src="/images/heart-attack.png">
+                        </div>
+                        <p>Maintain healthy routine for healthy heart</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <div class="image">
+                            <img src="/images/food.png">
+                        </div>
+                        <p>Eat healthy foods for good health</p>
+                    </td>
+                    <td>
+                        <div class="image">
+                            <img src="/images/hospital.png">
+                        </div>
+                        <p>Always keep first aid kit at home for emergency case</p>
+                    </td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</section>
+
+<!--End Home-->
+
+<%-include("../partials/footer")%>

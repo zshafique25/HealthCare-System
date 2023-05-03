@@ -1,0 +1,44 @@
+<%-include("../partials/header")%>
+
+
+<!--Start Medical Records-->
+<link rel="stylesheet" href="/medicalrecords.css">
+<section class="medicalrecords">
+    <div class="container">
+        <h1>Medical Records</h1>
+        <div class="box">
+            <!--Signup form-->
+            <form class="form" method="POST" enctype="application/x-www-form-urlencoded" accept-charset="UTF-8"
+                autocomplete="off">
+                <div class="textdisplay">
+                    <table>
+                        <tr style="background-color: rgb(0, 102, 255);">
+                            <th>Hospital name</th>
+                            <th>Doctor name</th>
+                            <th>Time of arrival</th>
+                            <!-- <th>Type of visit</th> -->
+                            <th>More Info</th>
+                        </tr>
+                        <%currentUser.medicalrecords.forEach(function(record){%>
+                        <tr>  
+
+                            <td><%=record.hospitalname%></td>
+                            <td><%=record.doctorname%></td>
+                            <td><%=record.timeofarrival.toDateString()%></td>
+                            <!-- <td></td> -->
+                            <td><a type="button"
+                                    href="/HCS/<%=currentUser._id%>/medicalrecords/<%=record._id%>/moreinfo">Click
+                                    Here</a></td>
+
+                        </tr>
+                        <%});%>
+                    </table>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</section>
+<!--End Meddical Records-->
+
+<%-include("../partials/footer")%>

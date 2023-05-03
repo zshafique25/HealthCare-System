@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700,900&display=swap');
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+.patientinfo{
+    min-height: 100vh;
+    padding: 15px;
+}
+.patientinfo h1{
+    margin-top: 70px;
+}
+.patientinfo h1::after{
+    content: '';
+    background: #ff4d73;
+    display: block;
+    height: 3px;
+    width: 335px;
+    margin: 10px auto 50px;
+    position: absolute;    
+}
+.patientinfo .box{
+    margin-top: 25px;
+}
+.patientinfo label{
+    font-size: 20px;
+    padding: 25px 0 25px 0;
+    margin-top: 25px;
+}
+.patientinfo input[type="text"]{
+    width: 40%;
+    margin-top: 5px;
+}
+.patientinfo input[type="text"]{
+    width: 40%;
+    height: 33px;
+    margin-bottom: 10px;
+    border: 1px solid  rgb(0, 102, 255);
+    background: none;
+    border-radius: 3px;
+    padding: 6px 15px;
+    box-sizing: border-box;
+    color: #000;
+    font-size: 16px;
+    transition: all .5s ease;    
+}
+.patientinfo input[type="text"]:hover{
+    border: 2px solid rgb(0, 102, 255);
+}
+.patientinfo input[type="text"]:focus{
+    border: 2px solid  rgb(0, 102, 255);
+}
+.patientinfo .select{
+    width: 13%;
+    height: 33px;
+    color: #333333;
+    font-size: 17px;
+    background-color: #eeeeee;
+    border: 1px solid #dddddd;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.patientinfo textarea{
+    width: 40%;
+    margin-top: 5px;
+}
+.patientinfo textarea{
+    width: 40%;
+    height: 33px;
+    margin-bottom: 10px;
+    border: 1px solid  rgb(0, 102, 255);
+    background: none;
+    border-radius: 3px;
+    padding: 6px 15px;
+    box-sizing: border-box;
+    color: #000;
+    font-size: 16px;
+    transition: all .5s ease;
+    font-family: 'Poppins', sans-serif;    
+}
+.patientinfo textarea:hover{
+    border: 2px solid rgb(0, 102, 255);
+}
+.patientinfo textarea:focus{
+    border: 2px solid  rgb(0, 102, 255);
+}
+.patientinfo input[type="number"]{
+    width: 40%;
+    margin-top: 5px;
+}
+.patientinfo input[type="number"]{
+    width: 40%;
+    height: 33px;
+    margin-bottom: 10px;
+    border: 1px solid  rgb(0, 102, 255);
+    background: none;
+    border-radius: 3px;
+    padding: 6px 15px;
+    box-sizing: border-box;
+    color: #000;
+    font-size: 16px;
+    transition: all .5s ease;    
+}
+.patientinfo input[type="number"]:hover{
+    border: 2px solid rgb(0, 102, 255);
+}
+.patientinfo input[type="number"]:focus{
+    border: 2px solid  rgb(0, 102, 255);
+}
+.patientinfo input[type="submit"] {
+    border: none;
+    background:  rgb(0, 102, 255);
+    outline: none;
+    height: 40px;
+    color: #fff;
+    padding: 0 30px 0 30px;
+    font-size: 18px;
+    border-radius: 20px;
+    transition: all .5s ease;
+    cursor: pointer;
+    margin-bottom: 80px;   
+}
+.patientinfo input[type="submit"]:hover{
+    cursor: pointer;
+    background: #ff4d73;
+    color: #fff;
+}
+.select{
+    padding: 4px 8px;
+    color: #333333;
+    background-color: #eeeeee;
+    border: 1px solid #dddddd;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.Select{
+    width: 40%;
+    padding: 6px 15px;
+    color: #333333;
+    background-color: #eeeeee;
+    border: 1px solid #dddddd;
+    cursor: pointer;
+    border-radius: 5px;
+}

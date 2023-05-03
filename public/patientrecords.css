@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700,900&display=swap');
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+.patientrecords{
+    min-height: 100vh;
+    padding: 15px;
+}
+.patientrecords h1{
+    margin-top: 70px;
+}
+.patientrecords h1::after{
+    content: '';
+    background: #ff4d73;
+    display: block;
+    height: 3px;
+    width: 220px;
+    margin: 10px auto 50px;
+    position: absolute;    
+}
+.patientrecords .textdisplay table, th, td{
+    border: 1px solid #333333;
+    border-collapse: collapse;
+    margin-top: 40px;
+    height: 20px;
+    width: 800px;
+    font-size: 16px;
+}
+.patientrecords .textdisplay table tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+.patientrecords .textdisplay table td{
+    text-align: center;    
+}
+
+.patientrecords button {
+    border: none;
+    background:  rgb(0, 102, 255);
+    outline: none;
+    height: 35px;
+    color: #fff;
+    padding: 0 30px 0 30px;
+    font-size: 15px;
+    border-radius: 20px;
+    transition: all .5s ease;
+    cursor: pointer;
+    margin-top: 15px;
+}
+.patientrecords button:hover {
+    cursor: pointer;
+    background: #ff4d73;
+    color: #fff;
+}

@@ -1,0 +1,39 @@
+<%-include("../partials/header")%>
+
+
+    <!--Start Check Appointment-->
+    <link rel="stylesheet" href="/check appointment.css">
+    <section class="checkappointment">
+        <div class="container">
+                    <h1>Searched Appointments</h1>
+                    <div class="box">
+                        <form class="form" action="/HCS/<%=currentUser._id%>/searchedappointments" method="POST" enctype="application/x-www-form-urlencoded" accept-charset="UTF-8" autocomplete="off">
+                             
+                            <div class="textdisplay">
+                                <table>
+                                    <tr style="background-color: rgb(0, 102, 255);">
+                                        <th>Patient name</th>
+                                        <th>CNIC</th>
+                                        <th>Date</th>
+                                        <th>Type of Case</th>
+                                    </tr>
+                                    <%appointments.forEach(function(appointment){%>
+                                    <tr>
+                                        <td><%=appointment.patientname%></td>
+                                        <td><%=appointment.patientcnic%></td>
+                                        <td><%=appointment.date%></td>
+                                        <td><%=appointment.typeofcase%></td>
+                                    </tr>
+                                    <%})%>
+                                </table>
+                            </div>
+                        </form>
+                    </div>
+                
+            </div>
+    </section>
+    <!--End Check Appointment-->
+
+
+
+<%-include("../partials/footer")%>

@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700,900&display=swap');
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+html{
+    scroll-behavior: smooth;
+}
+body{
+    margin:0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #cccccc;
+}
+*{
+    box-shadow: border-box;
+    margin: 0;
+}
+.container{
+    max-width: 1140px;
+    margin: auto;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+/* Header Section */
+header{
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    border-bottom: 1px solid #423940;
+    padding: 0px 15px;
+    z-index: 10;
+}
+header.fixed{
+    background-color: beige;
+    position: fixed;
+    border-color:  rgb(0, 102, 255);
+}
+header .row{
+    justify-content: space-between;
+    align-items: center;
+}
+header .brand-name a{
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: 600;
+    color: #ffffff;
+    text-transform: uppercase;
+    position: relative;
+}
+header.fixed .brand-name a{
+    color: #000000;
+}
+header .navbar ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+header .navbar ul li{
+    display: inline-block;
+    margin-left: 35px;
+}
+header .navbar ul li a{
+    font-size: 15px;
+    text-decoration: none;
+    line-height: 72px;
+    color: #ffffff;
+    display: block;
+    font-weight: 600;
+    position: relative;
+}
+header.fixed .navbar ul li a{
+    color: #000000;
+}
+header .navbar ul li a::before{
+    content: '';
+    height: 3px;
+    background-color: #ff4d73;
+    width: 0%;
+    position: absolute;
+    right: 0px;
+    bottom: -1px;
+    transition: all .5s ease;
+}
+header.fixed .navbar ul li a::before{
+    color:#febd01
+}
+header .navbar ul li a:hover::before{
+    width: 100%;
+    left: 0;
+}
+header .navbar ul li a.active::before{
+    width: 100%;
+    left: 0;
+}
+.sub-menu-1{
+    display: none;
+}
+.navbar ul li:hover .sub-menu-1{
+    display: block;
+    position: absolute;
+    background: transparent;
+    margin: 0;
+}
+.navbar ul li:hover .sub-menu-1 ul {
+    display: block;
+    margin: 10px;
+}
+.navbar ul li:hover .sub-menu-1 ul li {
+    width: 160px;
+    padding: 0px;
+    border-bottom: 1px dotted rgb(0, 102, 255);
+    background: white;
+    border-radius: 0;
+    text-align: left;
+}
+.navbar ul li:hover .sub-menu-1 ul li:last-child{
+    border-bottom: none;
+}
+.navbar ul li:hover .sub-menu-1 ul li:hover{
+    color: #b2ffb2;
+}
+.navbar ul li:hover .sub-menu-1 ul li a{
+    color: black;
+    text-align: left;
+    padding: 0px;
+}

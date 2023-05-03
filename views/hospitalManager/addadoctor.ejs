@@ -1,0 +1,22 @@
+<%-include("../partials/header")%>
+
+<!--Start Register Hospital-->
+<link rel="stylesheet" href="/addadoctor.css">
+<section class="add">
+    <div class="container">
+        <div >
+            <h1>Add a New Doctor</h1><br><br><br>
+            <form class="form" action="/HCS/<%=currentUser._id%>/addadoctor" method="POST"
+                enctype="application/x-www-form-urlencoded" accept-charset="UTF-8" autocomplete="off">
+                <label>Enter Below Doctor's CNIC:</label><br><br>
+                <input type="text" id="username" name="username" placeholder="xxxxxxxxxxxxx" pattern="[0-9]{13}"
+                    maxlength="13" required><br>
+                <input type="submit" class="button" value="Add">
+            </form>
+        </div>
+
+    </div>
+</section>
+<!--End Register hospital-->
+
+<%-include("../partials/footer")%>

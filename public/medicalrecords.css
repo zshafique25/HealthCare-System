@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700,900&display=swap');
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+.medicalrecords{
+    min-height: 100vh;
+    padding: 15px;
+}
+.medicalrecords h1{
+    margin-top: 70px;
+}
+.medicalrecords h1::after{
+    content: '';
+    background: #ff4d73;
+    display: block;
+    height: 3px;
+    width: 230px;
+    margin: 10px auto 50px;
+    position: absolute;    
+}
+.medicalrecords .textdisplay table, th, td{
+    border: 1px solid #333333;
+    border-collapse: collapse;
+    margin-top: 40px;
+    height: 20px;
+    width: 1100px;
+    font-size: 14px;
+}
+.medicalrecords .textdisplay table tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+.medicalrecords .textdisplay table td{
+    text-align: center;    
+}

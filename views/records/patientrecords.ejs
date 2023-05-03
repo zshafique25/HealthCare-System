@@ -1,0 +1,48 @@
+<%-include("../partials/header")%>
+
+<!--Start Patient Records-->
+<link rel="stylesheet" href="/patientrecords.css">
+<script type="text/javascript" src="script.js"></script>
+<section class="patientrecords">
+    <div class="container">
+        <h1>Patient Records</h1>
+        <div class="box">
+            <form class="form" action="/HCS/<%=currentUser._id%>/new" method="GET"
+                enctype="application/x-www-form-urlencoded" accept-charset="UTF-8" autocomplete="off">
+                <div class="textdisplay">
+                    <table>
+                        <tr style="background-color: rgb(0, 102, 255);">
+
+                            <th>Patient CNIC</th>
+                            <th>Time of arrival</th>
+                            <th>More Info</th>
+                        </tr>
+                        <script>console.log(currentUser.patientrecords)</script>
+                        <%currentUser.patientrecords.forEach(function(record){%>
+                        <tr>
+
+                            <td><%=record.patientcnic%></td>
+                            <td><%=record.timeofarrival.toDateString()%></td>
+                            <td><a type="button"
+                                    href="/HCS/<%=currentUser._id%>/patientrecords/<%=record._id%>/moreinfo?id=<%=record._id%>">Click
+                                    Here</a></td>
+
+                        </tr>
+                        <%});%>
+
+
+                    </table>
+                    <br>
+                    <button href="/HCS/<%=currentUser._id%>/newpatientrecord" id="btn" name="newpatient">Add a New
+                        Patient</button>
+
+                </div>
+            </form>
+        </div>
+
+    </div>
+</section>
+<!--End Meddication-->
+
+
+<%-include("../partials/footer")%>

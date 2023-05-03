@@ -1,0 +1,31 @@
+<%-include("../partials/header")%>
+
+<link rel="stylesheet" href="/registernewdoctor.css">
+
+<section class="registernewdoctor">
+    <div class="container">
+        <h1>Register a New Doctor</h1>
+        <div class="box">
+            <form class="form" action="/HCS/<%=currentUser._id%>/registernewdoctor" method="POST"
+                enctype="application/x-www-form-urlencoded" accept-charset="UTF-8" autocomplete="off">
+                <br><br><label>Please fill the following information of the person being registered</label><br><br>
+                <label>CNIC:</label><br>
+                <input type="text" class="username" id="username" name="username" placeholder="xxxxxxxxxxxxx" pattern="[0-9]{13}"
+                    maxlength="13" required><br><br>
+                <p>Specialization</p>
+                <select class="Select" id="specialization" name="specialization" required>
+                    <option disabled selected>Select Specialization</option>
+                    <option value="cardiology">Cardiology</option>
+                    <option value="optics">Optics</option>
+                    <option value="medicine">Medicine</option>
+                </select><br><br>
+                <input type="submit" class="button" value="Register">
+            </form>
+        </div>
+
+    </div>
+</section>
+
+
+
+<%-include("../partials/footer")%>

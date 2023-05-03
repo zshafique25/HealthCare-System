@@ -1,0 +1,87 @@
+<%-include("../partials/header")%>
+
+
+    <!--Start Check Appointment-->
+    <link rel="stylesheet" href="/check appointment.css">
+    <section class="checkappointment">
+        <div class="container">
+                    <h1>Check Appointments</h1>
+                    <div class="box">
+                        <form class="form" action="/HCS/<%=currentUser._id%>/checkappointments" method="POST" enctype="application/x-www-form-urlencoded" accept-charset="UTF-8" autocomplete="off">
+                            <div class="find">
+                                <p>Type of Case:</p>
+                                <select class="Select" id="typeofcase" name="typeofcase" required>
+                                <option disabled selected>Select Case Type</option>
+                                <option value="cardiology">Cardiology</option>
+                                <option value="medicine">medicine</option> 
+                                <option value="optics">optics</option> 
+                            </select><br>
+                            <p>Date:</p>
+                            <!--Month-->
+                            <select class="SELECT" id="month" name="month" required>
+                                <option disabled selected>Month</option>
+                                <option value="january">January</option>
+                                <option value="febuary">Febuary</option>
+                                <option value="march">March</option>
+                                <option value="april">April</option>
+                                <option value="may">May</option>
+                                <option value="june">June</option>
+                                <option value="july">July</option>
+                                <option value="august">August</option>
+                                <option value="september">September</option>
+                                <option value="october">October</option>
+                                <option value="november">November</option>
+                                <option value="december">December</option>
+                            </select>
+                            <!--Date-->
+                            <select class="SELECT" id="date" name="date" required>
+                                <option disabled selected>Date</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                                <option value="15">15</option>
+                                <option value="16">16</option>
+                                <option value="17">17</option>
+                                <option value="18">18</option>
+                                <option value="19">19</option>
+                                <option value="20">20</option>
+                                <option value="21">21</option>
+                                <option value="22">22</option>
+                                <option value="23">23</option>
+                                <option value="24">24</option>
+                                <option value="25">25</option>
+                                <option value="26">26</option>
+                                <option value="27">27</option>
+                                <option value="28">28</option>
+                                <option value="29">29</option>
+                                <option value="30">30</option>
+                                <option value="31">31</option>
+                            </select>
+                            <!--Year-->
+                            <select class="SELECT" id="year" name="year" required>
+                                <option disabled selected>Year</option>
+                                <option value="2020">2020</option>
+                            </select><br>
+                            <input type="submit" class="button" value="Find">
+                            </div>
+                        </form>
+                    </div>
+                
+            </div>
+    </section>
+    <!--End Check Appointment-->
+
+
+
+<%-include("../partials/footer")%>

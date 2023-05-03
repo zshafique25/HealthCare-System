@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700,900&display=swap');
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+.personal-info{
+    min-height: 100vh;
+    padding: 15px;
+
+}
+.personal-info h1{
+    margin-top: 70px;
+}
+.personal-info h1::after{
+    content: '';
+    background: #ff4d73;
+    display: block;
+    height: 3px;
+    width: 180px;
+    margin: 10px auto 50px;
+    position: absolute;    
+}
+.personal-info .textdisplay table{
+    border-collapse: collapse;
+    margin-top: 30px;
+    height: 50px;
+}
+.personal-info .textdisplay table tr{
+    height: 35px;
+}
+.personal-info .textdisplay table th{
+    width: 180px;
+    font-size: 15px;
+}
+.personal-info .textdisplay table td{
+    width: 200px;
+    font-size: 15px;
+}
+.personal-info .textdisplay table th{
+    text-align: left;
+}
+.personal-info p{
+    font-size: 20px;
+    padding-top: 20px;
+}
+.personal-info label{
+    font-size: 20px;
+    padding: 25px 0 25px 0;
+    margin-top: 25px;
+}
+.personal-info .Education input[type="text"]{
+    width: 40%;
+    margin-top: 5px;
+}
+.personal-info .Education input[type="text"]{
+    width: 40%;
+    margin-bottom: 10px;
+    border: 1px solid  rgb(0, 102, 255);
+    background: none;
+    border-radius: 3px;
+    padding: 6px 15px;
+    box-sizing: border-box;
+    color: #000;
+    font-size: 16px;
+    transition: all .5s ease;    
+}
+.personal-info .Education input[type="text"]:hover{
+    border: 2px solid rgb(0, 102, 255);
+}
+.personal-info .Education input[type="text"]:focus{
+    border: 2px solid  rgb(0, 102, 255);
+}
+.personal-info .family table{
+    border-collapse: collapse;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    background-color: rgb(0, 102, 255);
+    border: 1px solid #ff4d73;
+}
+.personal-info .family table input[type="text"]{
+    width: 130px;
+    text-align: center;
+}
+.personal-info input[type="submit"] {
+    border: none;
+    background:  rgb(0, 102, 255);
+    outline: none;
+    height: 40px;
+    color: #fff;
+    padding: 0 30px 0 30px;
+    font-size: 18px;
+    border-radius: 20px;
+    transition: all .5s ease;
+    cursor: pointer;
+    margin-bottom: 80px;   
+}
+.personal-info input[type="submit"]:hover{
+    cursor: pointer;
+    background: #ff4d73;
+    color: #fff;
+}

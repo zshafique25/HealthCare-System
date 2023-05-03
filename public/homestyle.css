@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700,900&display=swap');
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+.home{
+    min-height: 100vh;
+}
+.home img{
+    height: 500px;
+    width: 100%;
+    margin-top: 50px;
+}
+.home .detail-box{
+    height: 200px;
+    width: 600px;
+    margin: 30px 0px 30px 310px;
+}
+.home .detail-box p q{
+    font-size: 30px;
+    font-style: italic;
+}
+.home .detail-box h3{
+    font-size: 25px;
+    font-style: italic;
+    padding-left: 380px;
+}
+.home .detail-box h3::after{
+    content: '';
+    background: #ff4d73;
+    display: block;
+    height: 3px;
+    width: 160px;
+    margin: 10px auto 50px;
+    position: absolute;
+}
+.home .box h1{
+    text-align: center;
+    padding-top: 10px;
+}
+.home .box h1::after{
+    content: '';
+    background: #ff4d73;
+    display: block;
+    height: 3px;
+    width: 410px;
+    margin: 20px auto 50px;
+}
+.home .piechart{
+    padding-top: 15px;
+    padding-left: 20%;
+}
+.home .health-care h1{
+    text-align: center;
+    padding-top: 10px;
+}
+.home .health-care h1::after{
+    content: '';
+    background: #ff4d73;
+    display: block;
+    height: 3px;
+    width: 190px;
+    margin: 20px auto 50px;
+}
+.home .health-care table td{
+    border-collapse: collapse;
+    height: 220px;
+    width: 1100px;
+    padding-top: 0px;
+    margin-top: 0px;
+}
+.home .health-care table td img{
+    width: 150px;
+    height: 150px;
+    margin-left: 50px;
+}
+.home .health-care p{
+    font-size: 16px;
+    color: black;
+    text-align: center;
+}
+.home .health_care span{
+    color: #ff4d73;
+}

@@ -1,0 +1,26 @@
+footer{
+    margin-top: 100px;
+    padding: 30px 15px;
+    background-color: #0c0c17;
+}
+footer .logo{
+    background-color: none;
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+    font-size: 30px;
+    color: #ffffff;
+    font-weight: 600;
+}
+.copyright{
+    background-color:  #0c0c17;
+    border-top: 1px solid #1d1d27;
+    padding:15px;
+}
+.copyright p{
+    color:  #838383;
+    margin: 0;
+    text-align: center;
+    font-weight: 300;
+    font-size: 12px;
+}

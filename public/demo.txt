@@ -1,0 +1,3 @@
+11111111111: admin account ,can register new hospitals
+33333333333: doctor account
+444444444444: hospital manager account

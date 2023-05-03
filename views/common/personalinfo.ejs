@@ -1,0 +1,50 @@
+<%-include("../partials/header")%>
+
+
+<!--Start Personalinfo-->
+<link rel="stylesheet" href="/personalinfo.css">
+<script type="text/javascript" src="script.js"></script>
+<section class="personal-info">
+    <div class="container">
+        <h1>Personal Info</h1>
+        <div class="box">
+            <!--Signup form-->
+            <form class="form" method="POST" enctype="application/x-www-form-urlencoded" accept-charset="UTF-8"
+                autocomplete="off">
+
+                <div class="textdisplay">
+                    <table>
+                        <tr>
+                            <th>Name:</th>
+                            <td><%=currentUser.name%></td>
+                        </tr>
+                        <tr>
+                            <th>CNIC:</th>
+                            <td><%=currentUser.username%></td>
+                        </tr>
+                        <tr>
+                            <th>Email:</th>
+                            <td><%=currentUser.email%></td>
+                        </tr>
+                        <tr>
+                            <th>Blood Group:</th>
+                            <td><%=currentUser.bloodGroup%></td>
+                        </tr>
+                        <tr>
+                            <th>Date of Birth:</th>
+                            <td><%=currentUser.dateOfBirth%></td>
+                        </tr>
+                        <tr>
+                            <th>Gender:</th>
+                            <td><%=currentUser.gender%></td>
+                        </tr>
+                    </table>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</section>
+<!--End Personalinfo-->
+
+<%-include("../partials/footer")%>

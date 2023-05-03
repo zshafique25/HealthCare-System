@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Health Care System</title>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+    <meta name="viewport" content="width-device-width, initial-scale=1">
+    <link rel="stylesheet" href="/header.css">
+    <link rel="stylesheet" href="/footer.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700,900&display=swap">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <!--Start Header-->
+    <header class="fixed">
+        <div class="container">
+            <div class="row">
+                <div class="brand-name">
+                    <a class="logo">Health Care System</a>
+                </div>
+                <div class="navbar">
+                    <ul>
+                        <li><a href="/HCS/home">Home</a></li>
+                        <% if(currentUser.accounttype==="admin"){%>
+                        <li><a href="/HCS/<%=currentUser._id%>/registerhospital">Register a hospital</a></li>
+                        <%}%>
+                    <% if(currentUser.accounttype==="hospitalManager"){%>
+                        <li><a href="/HCS/<%=currentUser._id%>/addadoctor">Add a doctor</a></li>
+                        <li><a href="/HCS/<%=currentUser._id%>/registernewdoctor">Register a New Doctor</a></li>
+                        <li><a href="/HCS/<%=currentUser._id%>/checkappointments">Check appointments</a></li>
+                        <%}%>
+                    <%if(currentUser.accounttype!=="admin" && currentUser.accounttype!=="hospitalManager" ){%>
+                        <li><a href="/HCS/<%=currentUser._id%>/Personalinfo">Personal Info</a></li>
+                        <li><a href="/HCS/<%=currentUser._id%>/medicalrecords">Medical records</a></li>
+                        <% if(currentUser.accounttype==="doctor"){%>
+                        <li><a href="/HCS/<%=currentUser._id%>/patientrecords">Patient Records</a></li>
+                        <%}%>
+                        <li><a>More<i class="fa fa-caret-down"></i></a>
+                            <div class="sub-menu-1">
+                                <ul>
+                                    <li><a href="/HCS/<%=currentUser._id%>/searchhospital">Hospitals</a></li>
+                        <li><a href="/HCS/<%=currentUser._id%>/bookappointment">Book Appointment</a></li>
+                        <% if(currentUser.accounttype==="doctor" || currentUser.accounttype==="pharmacist" ){%>
+                        <li><a href="/HCS/<%=currentUser._id%>/search">Search</a></li>
+                        <%}%>
+                                </ul>
+                             </div>
+                        </li>
+                        <%}%>
+                        <li><a href="/">Logout</a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <%if(error && error.length>0){%>
+        <div class="alert alert-danger" role="alert">
+            <%=error%>
+        </div>
+        <%}%>
+    </div>
+
+    <!--End Header-->

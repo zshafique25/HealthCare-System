@@ -1,0 +1,47 @@
+<%-include("../partials/header")%>
+
+
+<link rel="stylesheet" href="/confirmation.css">
+<!--Start Confirm Patient Info-->
+<section class="confirmpatientinfo">
+    <div class="container">
+        <h1>Confirm Patient Info</h1>
+        <div class="box">
+            <form class="form" action="/HCS/<%= currentUser._id %>/confirmation" method="POST"
+                enctype="application/x-www-form-urlencoded" accept-charset="UTF-8" autocomplete="off">
+                <div class="textdisplay">
+                    <table>
+                        <tr>
+                            <th>Patient CNIC:</th>
+                            <td><%=data.search%></td>
+                        </tr>
+                        <tr>
+                            <th>Hospital Name:</th>
+                            <td><%=data.hospital%></td>
+                        </tr>
+                        <tr>
+                            <th>Illness:</th>
+                            <td><%=data.illness1%> , <%=data.illness2%> , <%=data.illness3%></td>
+                        </tr>
+                        <tr>
+                            <th>Medicine referred:</th>
+                            <td><%=data.medicine%></td>
+                        </tr>
+                        <tr>
+                            <th>Medicine Description:</th>
+                            <td><%=data.medicinedescription%></td>
+                        </tr>
+                        <tr>
+                            <th>Doctor comments(if any):</th>
+                            <td><%=data.comments%></td>
+                        </tr>
+                    </table>
+                    <input type="submit" class="button" value="Confirm">
+                </div>
+            </form>
+        </div>
+
+    </div>
+</section>
+<!--End Patient More Info-->
+<%-include("../partials/footer")%>

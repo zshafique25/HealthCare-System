@@ -1,0 +1,59 @@
+<%-include("../partials/header")%>
+
+    <!--Start Patient Info-->
+    <link rel="stylesheet" href="/searchresult.css">
+    <section class="searchresult">
+        <div class="container">
+            <h1>Patient Info</h1>
+            <div class="box">
+                <form class="form"  method="GET"  enctype="application/x-www-form-urlencoded" accept-charset="UTF-8" autocomplete="off">
+                    <div class="textdisplay">
+                        <table>
+                            <tr>
+                                <th>Patient Name:</th>
+                                <td><%=searchedUser.name%></td>
+                            </tr>
+                            <tr>
+                                <th>Patient CNIC:</th>
+                                <td><%=searchedUser.username%></td>
+                            </tr>
+                            <tr>
+                                <th>Date of Birth:</th>
+                                <td><%=searchedUser.dateOfBirth%></td>
+                            </tr>
+
+
+                        </table>
+                        <table id="show">
+                            <tr style="background-color: rgb(0, 102, 255);">
+
+                                <th>Hospital Name</th>
+                                <th>Doctor Name</th>
+                                <th>Time of Arrival</th>
+                                <th>More Info</th>
+                            </tr>
+                            <%searchedUser.medicalrecords.forEach(function(record){%>
+
+                            <tr>
+                                <td><%=record.hospitalname%></td>
+                                <td><%=record.doctorname%></td>
+                                <td><%=record.timeofarrival.toDateString()%></td>
+                                <td><a type="button" href="/HCS/<%=currentUser._id%>/searchresult/<%=record._id%>/moreinfo">Click
+                                        Here</a></td>
+                            </tr>
+                            <%});%>
+
+
+
+                        </table>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </section>
+    <!--End Patient More Info-->
+
+  
+    
+    <%-include("../partials/footer")%>

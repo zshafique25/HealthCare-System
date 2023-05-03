@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700,900&display=swap');
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+.search{
+    min-height: 100vh;
+    padding: 15px;
+}
+
+.search h1{
+    margin-top: 70px;
+}
+.search h1::after{
+    content: ''; 
+    background: #ff4d73;
+    display: block;
+    height: 3px;
+    width: 310px;
+    margin: 10px auto 50px;
+    position: absolute;    
+}
+.search p{
+    font-size: 18px;
+    padding-top: 12px;
+    margin-left: 0.3%;
+}
+.search input[type="text"] {
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    font-size: 22px;
+    border: 1px solid  rgb(0, 102, 255);
+    border-radius: 3px;
+    color: #000;
+    transition: all .5s ease;
+}
+.search input[type="text"]:hover {
+    border: 2px solid  rgb(0, 102, 255);
+}
+.search input[type="text"]:focus {
+    border: 2px solid  rgb(0, 102, 255);
+}
+.search input[type="submit"] {
+    border: none;
+    background:  rgb(0, 102, 255);
+    outline: none;
+    height: 40px;
+    color: #fff;
+    padding: 0 30px 0 30px;
+    font-size: 18px;
+    border-radius: 20px;
+    transition: all .5s ease;
+    cursor: pointer;
+    margin-top: 15px;
+}
+.search input[type="submit"]:hover {
+    cursor: pointer;
+    background: #ff4d73;
+    color: #fff;
+}
+
+.select{
+    padding: 4px 8px;
+    color: #333333;
+    background-color: #eeeeee;
+    border: 1px solid #dddddd;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.Select{
+    width: 120%;
+    padding: 6px 15px;
+    color: #333333;
+    background-color: #eeeeee;
+    border: 1px solid #dddddd;
+    cursor: pointer;
+    border-radius: 5px;
+}

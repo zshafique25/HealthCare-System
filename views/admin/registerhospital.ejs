@@ -1,0 +1,37 @@
+<%-include("../partials/header")%>
+
+
+<!--Start Register Hospital-->
+<link rel="stylesheet" href="/register hospital.css">
+<section class="registerhospital">
+    <div class="container">
+        <div >
+            
+            <h1>Register a New Hospital</h1><br><br>
+            <form class="form" action="/HCS/<%=currentUser._id%>/registerhospital" method="POST"
+                enctype="application/x-www-form-urlencoded" accept-charset="UTF-8" autocomplete="off">
+                <label>Hospital Name:</label><br>
+                <input type="text" id="name" name="name" placeholder="Hospital Name" required><br><br>
+                <label>City:</label><br>
+                <input type="text" id="city" name="city" placeholder="City" required><br><br>
+                <label>Address:</label><br>
+                <input type="text" id="address" name="address" placeholder="Address" required><br><br>
+                <label>Contact:</label><br>
+                <input type="text" id="contact" name="contact" placeholder="Contact No." pattern="[0-9]{11}" required><br><br>
+                <label>Email:</label><br>
+                <input type="text" id="email" name="email" placeholder="email"
+                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required><br><br>
+                <label>Enter the Daily number of patients it will attend:</label><br>
+                <input type="number" id="medicine" name="medicine" placeholder="medicine" pattern="[0-9]" required><br><br>
+                <input type="number" id="optics" name="optics" placeholder="optics" pattern="[0-9]" required><br><br>
+                <input type="number" id="cardiology" name="cardiology" placeholder="cardiology" pattern="[0-9]"
+                    required><br><br>
+                <input type="submit" onclick="window.location;" id="save" class="button" value="Register">
+            </form>
+        </div>
+
+    </div>
+</section>
+<!--End Register hospital-->
+
+<%-include("../partials/footer")%>

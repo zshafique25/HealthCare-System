@@ -1,0 +1,37 @@
+<%-include("../partials/header")%>
+
+<!--Start Patient Info-->
+<link rel="stylesheet" href="/search hospital.css">
+<section class="search">
+    <div class="container">
+        <h1>Search Hospital</h1><br><br><br>
+        <div >
+            <form class="form" action="/HCS/:id/searchhospital" method="POST"
+                enctype="application/x-www-form-urlencoded" accept-charset="UTF-8" autocomplete="off">
+                <p>Select a Hospital</p><br>
+                <div class="hospitalname">
+                    <table>
+                        <tr>
+                            <td>
+                                <select class="Select" id="hospital" name="hospital" required>
+                                    <option disabled selected>Select Hospital/Clinic</option>
+                                    <% hospital.forEach(function(hospital){ %>
+                                    <option value="<%=hospital.name %>"><%=hospital.name %></option>
+                                    <%});%>
+                                </select>
+                            </td>
+                            
+                        </tr>
+                        <tr>
+                        <td><input type="submit" class="button" id="submit" value="Search"></td>
+                        </tr>
+                    </table>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</section>
+<!--End Patiient Info-->
+
+<%-include("../partials/footer")%>
